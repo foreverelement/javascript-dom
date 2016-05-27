@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">	
+	a{display:block;line-height:40px;}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var aA = document.getElementsByTagName('a');
+		var oImg = document.getElementById('img1');
+		var oSource;
+		for(var i=0;i<aA.length;i++){
+
+			aA[i].onclick = function(){
+				oSource = this.getAttribute('href');
+				oImg.setAttribute("src",oSource);
+				return false;
+			};
+
+		}
+	};
+	</script>
+</head>
+<body>
+	<a href="images/pic1.jpg" width="300" height="160">图片1</a>
+	<a href="images/pic2.jpg" width="300" height="160">图片2</a>
+	<a href="images/pic3.jpg" width="300" height="160">图片3</a>
+	<a href="images/pic4.jpg" width="300" height="160">图片4</a>
+	
+	<img src="images/default.jpg" width="300" height="160" id="img1">
+</body>
+</html>
