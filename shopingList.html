@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shopingList</title>
+	<style type="text/css">
+		body{background:#000;color:white;}
+		p{color:yellow;font-family:"arial",sans-serif;font-size:1.2em;}
+		#pruchases{border:#fff 1px solid;background-color:#333;color:#ccc;padding:1em;}
+	</style>
+</head>
+<body>
+	<h1>what to buy</h1>
+	<p title="remind">Dont't forget to buy this stuff.</p>
+	<p>test</p>
+	<ul id="pruchases">
+		<li>A tin of teans</li>
+		<li class="sale">Cheese</li>
+		<li class="sale important">Milk</li>
+	</ul>
+	<script type="text/javascript">
+		// alert(typeof document.getElementById('pruchases'));
+		var aP = document.getElementsByTagName('p');
+		for(var i=0;i<aP.length;i++){
+			var title_text = aP[i].getAttribute('title');
+			if(title_text){
+				aP[i].setAttribute('title','new remind');
+				alert(aP[i].getAttribute('title'));
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/showPic.css">
+</head>
+<body>
+	<h1>showPic</h1>
+	<ul>
+		<li><a href="images/pic1.jpg" width="300" height="160" onclick="showPic(this);return false;" title="一盘水果">图片1</a></li>
+		<li><a href="images/pic2.jpg" width="300" height="160" onclick="showPic(this);return false;" title="一盘牛肉">图片2</a></li>
+		<li><a href="images/pic3.jpg" width="300" height="160" onclick="showPic(this);return false;" title="一堆柿子椒">图片3</a></li>
+		<li><a href="images/pic4.jpg" width="300" height="160" onclick="showPic(this);return false;" title="薯条看着不错">图片4</a></li>
+	</ul>
+	<div class="content">
+		<img src="images/default.jpg" width="300" height="160" id="placeholder">
+		<h4 id="description">请选择一张图片</h4>
+	</div>
+	<script type="text/javascript" src="js/showPic.js">
+	// alert(document.getElementById('description').nodeValue);    null,不是第一个节点的值
+	// alert(document.getElementById('description').childNodes[0].nodeValue);
+   	</script>
+</body>
+</html>
